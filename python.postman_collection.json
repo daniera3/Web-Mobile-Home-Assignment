@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "71e8a202-6f36-4417-b8c2-842b3f95c82f",
+		"name": "python",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://danitest.pythonanywhere.com/massage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sender\": \"dani\",\r\n    \"receiver\": \"dani2\",\r\n    \"subject\": \"hi\",\r\n    \"message\": \"massage2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/message",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"message"
+					]
+				},
+				"description": "{\r\n    \"sender\" : \"dani\", \r\n    \"receiver\": \"dani2\",\r\n    \"subject\": \"hi\",\r\n    \"message\": \"massage2\"\r\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "https://danitest.pythonanywhere.com/massage?receiver=dani2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/message?receiver=dani2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"message"
+					],
+					"query": [
+						{
+							"key": "receiver",
+							"value": "dani2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://danitest.pythonanywhere.com/massageUnread?receiver=dani3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/messageUnread?receiver=dani2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"messageUnread"
+					],
+					"query": [
+						{
+							"key": "receiver",
+							"value": "dani2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://danitest.pythonanywhere.com/deleteMassage?receiver=dani2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"massageId\": 1,\r\n    \"user\": \"dani2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/deleteMessage?receiver=dani2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"deleteMessage"
+					],
+					"query": [
+						{
+							"key": "receiver",
+							"value": "dani2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://danitest.pythonanywhere.com/readMassage?receiver=dani2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/readMessage?receiver=dani2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"readMessage"
+					],
+					"query": [
+						{
+							"key": "receiver",
+							"value": "dani2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
